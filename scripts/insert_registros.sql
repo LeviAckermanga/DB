@@ -1,6 +1,6 @@
 -- insert_registros.sql
 
-INSERT INTO registros (nombre, edad, email) VALUES ('Usuario1', 25, 'usuario1@example.com');
-INSERT INTO registros (nombre, edad, email) VALUES ('Usuario2', 30, 'usuario2@example.com');
-INSERT INTO registros (nombre, edad, email) VALUES ('Usuario3', 22, 'usuario3@example.com');
+INSERT INTO registros (nombre, edad, email) VALUES ('Diego', 23, 'diego@example.com');
+INSERT INTO registros (nombre, edad, email) VALUES ('Levi', 30, 'levi@example.com');
+INSERT INTO registros (nombre, edad, email) VALUES ('Branko', 23, 'branko@example.com');
 -- Agrega más sentencias INSERT según sea necesario
