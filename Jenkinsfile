@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        docker { image 'mysql-client-container' }
-    }
+    agent any
 
     stages {
 
