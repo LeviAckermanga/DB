@@ -18,7 +18,7 @@ pipeline {
                     def dbName = 'mysql'
 
                     // Ejecutar un script para insertar registros en la base de datos
-                    sh "mysql -h ${dbHost} -u ${dbUser} -p${dbPassword} ${dbName} < scripts/insert_registros.sql"
+                    sh "mysql -h ${dbHost} -u ${dbUser} -p ${dbPassword} ${dbName} < scripts/insert_registros.sql"
                 }
             }
         }
