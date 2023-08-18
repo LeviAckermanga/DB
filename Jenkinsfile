@@ -12,7 +12,7 @@ pipeline {
         stage('Desplegar a la Base de Datos') {
             steps {
                 script {
-                    def dbHost = '172.17.0.3'
+                    def dbHost = '172.17.0.3:3306'
                     def dbUser = 'root'
                     def dbPassword = 'diego3010'
                     def dbName = 'mysql'
