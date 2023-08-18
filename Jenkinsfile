@@ -11,8 +11,8 @@ pipeline {
         stage('Instalar dependencias') {
             steps {
                   script {
-                      sh 'apt-get update'
-                      sh 'apt-get install -y mysql-client'
+                      sh 'sudo apt-get update
+                      sh 'sudo apt-get install -y mysql-client'
                   }
             }
         }
