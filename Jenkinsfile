@@ -12,10 +12,10 @@ pipeline {
         stage('Desplegar a la Base de Datos') {
             steps {
                 script {
-                    def dbHost = '172.17.0.3:3306'
+                    def dbHost = '172.17.0.3:3307'
                     def dbUser = 'root'
                     def dbPassword = 'diego3010'
-                    def dbName = 'mysql'
+                    def dbName = 'mysqlite'
 
                     // Ejecutar un script para insertar registros en la base de datos
                     sh "mysql -h ${dbHost} -u ${dbUser} -p ${dbPassword} ${dbName} < scripts/insert_registros.sql"
