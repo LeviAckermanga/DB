@@ -1,18 +1,13 @@
 pipeline {
-    agent any
+    agent {
+        
+    }
     
     stages {
 
         stage('Construir y Testear') {
             steps {
                 sh 'mvn clean package'  
-            }
-        }
-        stage('Instalar dependencias') {
-            steps {
-                  script {
-                      sh 'sudo apt-get install -y mysql-client'
-                  }
             }
         }
 
@@ -22,7 +17,7 @@ pipeline {
                     def dbHost = '172.17.0.3:3307'
                     def dbUser = 'root'
                     def dbPassword = 'diego3010'
-                    def dbName = 'mysqlite'
+                    def dbName = 'mysql'
 
                     // Ejecutar un script para insertar registros en la base de datos
                     sh "mysql -h ${dbHost} -u ${dbUser} -p ${dbPassword} ${dbName} < scripts/insert_registros.sql"
