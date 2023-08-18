@@ -8,6 +8,11 @@ pipeline {
                 sh 'mvn clean package'  
             }
         }
+        stage('Instalar dependencias') {
+            steps {
+                sh 'apt-get install -y mysql-client'  
+            }
+        }
 
         stage('Desplegar a la Base de Datos') {
             steps {
